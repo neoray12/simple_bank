@@ -13,7 +13,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DB_SOURCE=postgresql://postgresAdmin:Mulesoft*Asia2024@cloud-services.demos.mulesoft.com:31913/simple_bank-neo?sslmode=disable
+      # - DB_SOURCE=postgresql://postgresAdmin:Mulesoft*Asia2024@cloud-services.demos.mulesoft.com:31913/simple_bank-neo?sslmode=disable
+      - DB_SOURCE=postgresql://root:secret@postgres:5432/simple_bank?sslmode=disable
     depends_on:
       - postgres
     entrypoint:
