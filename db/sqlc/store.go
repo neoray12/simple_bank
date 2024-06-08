@@ -46,6 +46,9 @@ func (store *SQLStore) execTx(ctx context.Context, fn func(*Queries) error) erro
 		return err
 	}
 
+	// Simulate a long running transaction
+	// time.Sleep(2 * time.Second)
+
 	return tx.Commit()
 
 }
