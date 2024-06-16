@@ -40,8 +40,7 @@ func NewGmailSender(name string, fromEmailAddress string, fromEmailPassword stri
 func (sender *GmailSender) SendEmail(
 	subject string,
 	content string,
-	to []string,
-	cc []string,
+	to []string, cc []string,
 	bcc []string,
 	attachFiles []string,
 ) error {
